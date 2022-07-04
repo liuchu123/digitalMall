@@ -1,0 +1,41 @@
+{
+  "pages":[  
+    "pages/goods-index/goods-index",
+    "pages/goods-detail/goods-detail", 
+    "pages/sort/sort",
+    "pages/cart/cart",
+    "pages/pay/pay",
+    "pages/my/my"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#FF0000",
+    "navigationBarTitleText": "数码商城"
+  },
+  "tabBar": {
+    "color": "#4D4D4D",
+    "selectedColor": "#FF0000",
+    "borderStyle": "black",
+    "list": [{
+      "selectedIconPath": "icons/selected_index.png",
+      "iconPath": "icons/index.png",
+      "pagePath": "pages/goods-index/goods-index",
+      "text": "首页"
+    },{
+      "selectedIconPath": "icons/selected_sort.png",
+      "iconPath": "icons/sort.png",
+      "pagePath": "pages/sort/sort",
+      "text": "分类"
+    },{
+      "selectedIconPath": "icons/selected_cart.png",
+      "iconPath": "icons/cart.png",
+      "pagePath": "pages/cart/cart",
+      "text": "购物车"
+    },{
+      "selectedIconPath": "icons/selected_my.png",
+      "iconPath": "icons/my.png",
+      "pagePath": "pages/my/my",
+      "text": "我的"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,47 @@
+<!--pages/goods-detail/goods-detail.wxml-->
+<!-- 商品展示 -->
+<swiper indicator-dots autoplay interval="3000">
+  <swiper-item>
+    <image src="{{data.imageone}}"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="{{data.imagetwo}}"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="{{data.imagethree}}"></image>,
+  </swiper-item>
+</swiper>
+<!-- 商品标题和价格 -->
+<view class="box-demo">
+  <text class="title">{{data.title}}{{data.titleTwo}}</text>
+  <text class="price">￥{{data.price}}</text>
+</view>
+<!-- 商品详情展示 -->
+<view>
+  <view class="tab {{HomeIndex==0?'active':''}}" bindtap="switchTab" data-index="0">商品详情</view>
+  <view class="tab {{HomeIndex==1?'active':''}}" bindtap="switchTab" data-index="1">产品参数</view>
+<view>
+  <view wx:if="{{HomeIndex==0}}" wx:for="{{data.imgdetail}}" wx:for-item="imgdetail">
+    <image src="{{imgdetail.image}}" mode="{{imgdetail.mode}}" class="fix-box"></image>
+  </view>
+  <view wx:if="{{HomeIndex==1}}" wx:for="{{data.imgdeparameter}}" wx:for-item="imgdeparameter">
+    <image src="{{imgdeparameter.image}}" mode="{{imgdeparameter.mode}}" class="fix-box"></image>
+  </view>
+</view>
+</view>
+<!-- 底部加入购物车 -->
+<view class="bottom"> 
+  <view class="left">
+    <image src="/icons/store.png" style="height:80rpx;width: 90rpx;" bindtap="backtoindex"></image>
+    <image bindtap="tocart" src="/icons/addcart.png" style="height:90rpx;width: 90rpx;"></image>
+    <text class="carts-icon-num" wx:if="{{hasCarts}}">{{num}}</text>
+  </view>
+  <view class="right">
+    <text class="textone" bindtap="addcart" data-id="{{data.id}}" data-title="{{data.title}}"
+     data-price="{{data.price}}" data-image="{{data.image}}">加入购物车</text>
+  </view>
+  <view class="right">
+    <text class="texttwo">联系客服</text>
+  </view>
+</view>
+

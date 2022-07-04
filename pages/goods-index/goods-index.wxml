@@ -1,0 +1,27 @@
+<!--pages/goods-index/goods-index.wxml-->
+<!-- 轮播图 -->
+<swiper indicator-dots autoplay interval="3000">
+  <swiper-item>
+    <image src="/images/swiper01.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/swiper02.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/swiper03.jpg"></image>
+  </swiper-item>
+</swiper>
+<!-- 商品展示部分 -->
+<view class="demo-box">
+  <block wx:for="{{main_key}}" wx:for-item="item">
+    <view class="goods-box" bindtap="btntodetail" data-id="{{item.id}}">
+      <image class="goods-pic" src="{{item.image}}"></image>
+      <view class="goods-title">{{item.title}}</view>
+      <view class="goods-titleTwo">{{item.titleTwo}}</view>
+      <view class="row">
+        <view class="goods-price">￥{{item.price}}</view>
+        <text class="goods-btn">看相似</text>
+      </view>
+    </view>
+  </block>
+</view>

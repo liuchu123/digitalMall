@@ -1,0 +1,44 @@
+<!--pages/cart/cart.wxml-->
+<!-- 左侧图标 -->
+<view wx:for="{{cartItems}}">
+  <view data-id="{{item.id}}" class="icon-box" data-index="{{index}}">
+    <view class="icon">
+      <icon wx:if="{{item.selected}}" type="success" color="#ff0000" size="22" bindtap="selectIcon" data-index="{{index}}"></icon>
+      <icon wx:else type="circle" bindtap="selectIcon" size="22" data-index="{{index}}"></icon>
+    </view>
+    <view>
+      <!-- 商品信息 -->
+      <view class="left-image">
+        <image class="addcart-image" src="{{item.image}}"></image>
+      </view>
+      <view class="left-detail">
+        <text class="cart-title">{{item.title}}</text>
+        <text class="cart-price">￥{{item.price}}</text>
+        <text bindtap="reduce" class="input" data-index="{{index}}">-</text>
+        <text class="input cart-amount">{{item.value}}</text>
+        <text bindtap="add" class="input" data-index="{{index}}">+</text>
+      </view>
+      <!-- 删除图标 -->
+      <view class="right">
+        <image src="/icons/delete.png" bindtap="delete" data-index="{{index}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 底部 -->
+<view class="cart-total">
+  <text class="total-text">合计:</text>
+  <text class="total-color">￥{{total}}元</text>
+</view>
+<view class="total-bottom">
+  <icon wx:if="{{checkAll}}" class="cart-icon" type="success" color="#ff0000" size="22" bindtap="select" data-index="{{index}}"></icon>
+  <icon wx:else type="circle" class="cart-icon" size="22" bindtap="select" data-index="{{index}}"></icon>
+  <text class="checked-all">全选</text>
+  <view class="clear-cart">
+    <text class="pay" bindtap="goPay">结算</text>
+  </view>
+  <view class="clear-cart">
+    <text class="clear-text" bindtap="clearcart" data-id="{{item.id}}">清空购物车</text>
+  </view>
+</view>
+

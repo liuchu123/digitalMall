@@ -1,0 +1,96 @@
+<!--pages/my/my.wxml-->
+<view class="item">
+<view>
+	<image class="icon" mode="widthFix" src="/icons/set.png"></image>
+<view class="txt">账号设置</view>
+</view>
+<view>
+  <image class="icon" mode="widthFix" src="/icons/money.png"></image>
+	<view class="txt">零钱</view>
+  <view class="little">￥520.00</view>
+</view>
+</view>
+
+<view class="box">
+<view class="tittle">我的订单</view>
+<view class="content">
+<view class="con">
+	<image class="icon1" mode="widthFix" src="/icons/dfk.png"></image>
+<view class="cctxt">待付款</view>
+</view>
+<view  class="con">
+	<image class="icon1" mode="widthFix" src="/icons/dfh.png"></image>
+<view class="cctxt">待发货</view>
+</view>
+<view class="con">
+	<image class="icon1" mode="widthFix" src="/icons/dsh.png"></image>
+<view class="cctxt">待收货</view>
+</view>
+<view class="con">
+	<image class="icon1" mode="widthFix" src="/icons/tksh.png"></image>
+<view class="cctxt">退款/售后</view>
+</view>
+
+</view>
+</view>
+
+<view class="box">
+<view class="tittle">生活服务</view>
+<view class="content">
+<view class="con">
+	<image class="icon1" mode="widthFix" src="/icons/hyzx.png"></image>
+<view class="cctxt">会员中心</view>
+</view>
+<view  class="con">
+	<image class="icon1" mode="widthFix" src="/icons/sqk.png"></image>
+<view class="cctxt">省钱卡</view>
+</view>
+<view class="con">
+	<image class="icon1" mode="widthFix" src="/icons/hbkq.png"></image>
+<view class="cctxt">红包卡券</view>
+</view>
+<view  class="con">
+	<image class="icon1" mode="widthFix" src="/icons/hbqd.png"></image>
+<view class="cctxt">红包签到</view>
+</view>
+</view>
+</view>
+
+
+<view class="box">
+<view class="content">
+<view class="con">
+	<image class="icon1" mode="widthFix" src="/icons/sylq.png"></image>
+<view class="cctxt">试用领取</view>
+</view>
+<view  class="con">
+	<image class="icon1" mode="widthFix" src="/icons/ttlq.png"></image>
+<view class="cctxt">天天领钱</view>
+</view>
+<view class="con">
+	<image class="icon1" mode="widthFix" src="/icons/dphy.png"></image>
+<view class="cctxt">店铺会员</view>
+</view>
+<view  class="con">
+	<image class="icon1" mode="widthFix" src="/icons/lqzx.png"></image>
+<view class="cctxt">领券中心</view>
+</view>
+<view class="con">
+	<image class="icon1" mode="widthFix" src="/icons/shdz.png"></image>
+<view class="cctxt">收货地址</view>
+</view>
+<view  class="con">
+	<image class="icon1" mode="widthFix" src="/icons/gfkf.png"></image>
+<view class="cctxt">官方客服</view>
+</view>
+<view class="con">
+	<image class="icon1" mode="widthFix" src="/icons/wdkd.png"></image>
+<view class="cctxt">我的快递</view>
+</view>
+<view  class="con">
+	<image class="icon1" mode="widthFix" src="/icons/zthf.png"></image>
+<view class="cctxt">主题换肤</view>
+</view>
+</view>
+</view>
+

@@ -1,0 +1,43 @@
+/* pages/goods-index/goods-index.wxss */
+/* 轮播图样式 */
+swiper{
+  width: 100%;height: 380rpx;
+}
+/* 轮播图中图片样式 */
+swiper image{
+  width: 100%;height: 380rpx;
+}
+/* 商品展示外部样式 */
+.demo-box{
+  display:flex;flex-direction: row;flex-wrap:wrap ;padding: 30rpx;
+}
+.good-box{
+  width: 45%;margin-bottom: 20rpx;
+}
+/* 商品内容样式 */
+.goods-pic{
+  width: 220rpx;height: 250rpx;
+  margin: 0 auto;display:block;
+}
+.row{
+  display: flex;flex-direction: row;justify-content: space-around;
+}
+/* 看相似样式 */
+.goods-btn{
+  border: 1px solid #e3e3e3;border-radius: 20rpx;
+  margin-top: 20rpx;width: 100rpx;
+  height: 40rpx;line-height: 40rpx;
+  font-size: 24rpx;color:#aaa;
+  letter-spacing: 2rpx;text-align: center;
+}
+/* 商品标题样式 */
+.goods-title{
+  font-size: 30rpx;font-weight: 600;text-align: center;
+}
+.goods-titleTwo{
+  font-size: 24rpx;margin-top: 10rpx;text-align: center;
+}
+/* 商品价格样式 */
+.goods-price{
+  font-size: 30rpx;margin-top: 20rpx;color: #ee3b3b;
+}

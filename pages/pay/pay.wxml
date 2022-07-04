@@ -1,0 +1,51 @@
+<!--pages/pay/pay.wxml-->
+<view class="list-text">
+  <text>商品列表</text>
+</view>
+<view wx:if="{{cartItems!=[]}}">
+  <view class="list-goods" wx:for="{{cartItems}}"wx:if="{{item.selected}}" >
+    <!-- 商品展示 -->
+    <image class="pic-goods" src="{{item.image}}"></image>
+    <!-- 商品名称 -->
+    <text class="title-goods">{{item.title}}</text>
+    <!-- 价格图标和商品价格 -->
+    <text class="price-goods">￥{{item.price}}</text>
+    <!-- 删除图标 -->
+    <text class="amount-goods">×{{item.value}}</text>
+  </view>
+</view>
+<view class="deliver">
+  <view>
+    <view class="sevice">配送服务</view>
+    <view class="time">中小件送货时间</view>
+  </view>
+  <view class="time-select">
+    <picker mode="time" bindchange="timeChange1">
+      <text>配送时间：{{time1}}</text>
+    </picker>
+    <picker mode="time" bindchange="timeChange2">
+      <text>-{{time2}}</text>
+    </picker>
+  </view>
+</view>
+<view class="hr"></view>
+<view class="remark">
+  <view>备注</view>
+  <input placeholder="选填：给商家备注（50字以内）" auto-focus/>
+</view>
+<view class="cost-one">
+  <text class="left">商品金额</text>
+  <text class="right">￥{{total}}</text>
+</view>
+<view class="cost-two">
+  <text class="left">运费</text>
+  <text class="right">+￥6</text>
+</view>
+<view class="cost-three">
+  <text class="left">实际付款</text>
+  <text class="right">￥{{total+6}}</text>
+</view>
+<view class="bottom">
+  <text>微信支付</text>
+</view>
+

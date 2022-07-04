@@ -1,0 +1,36 @@
+<!--pages/sort/sort.wxml-->
+<!-- 分隔线 -->
+<view class="hr"></view>
+<!-- 搜索框 -->
+<view>
+  <input placeholder="请输入商品名称"></input>
+</view>
+<view class="hr"></view>
+<view class="content">
+<!-- 左侧内容 -->
+<view class="left">
+  <scroll-view scroll-y>
+    <view id="1" bindtap="switchTab">手机产品</view>
+    <view id="2" bindtap="switchTab">时尚耳机</view>
+    <view id="3" bindtap="switchTab">mini相机</view>
+    <view id="4" bindtap="switchTab">电脑硬盘</view>
+    <view id="5" bindtap="switchTab">鼠标键盘</view>
+    <view id="6" bindtap="switchTab">平板电脑</view>
+  </scroll-view>
+</view>
+<!-- 右侧内容 -->
+<view class="right">
+  <block wx:for="{{main_key}}" wx:for-item="item" class="left">
+    <block wx:if="{{item.sort==sort}}">
+      <view bindtap="btntodetail" data-id="{{item.id}}">
+        <image class="right-image" src="{{item.image}}"></image>
+        <view class="title-box">
+          <view class="goods-title">{{item.title}}</view>
+          <view class="goods-titleTwo">{{item.titleTwo}}</view>
+          <view class="goods-price">￥{{item.price}}</view>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
+</view>
